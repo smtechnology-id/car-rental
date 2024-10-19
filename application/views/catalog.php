@@ -1,5 +1,5 @@
 <!--<< Breadcrumb Section Start >>-->
-<div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/bg-header-banner.jpg');">
+<div class="breadcrumb-wrapper bg-cover" style="background-image: url('<?= base_url('assets/landing-assets/img/bg-header-banner.jpg'); ?>');">
     <div class="container">
         <div class="page-heading">
             <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
@@ -25,258 +25,43 @@
     <div class="container">
         <div class="car-list-wrapper">
             <div class="row g-4">
-                <div class="col-lg-12">
-                    <div class="car-list-items">
-                        <div class="car-image bg-cover" style="background-image: url('assets/img/car/car-list-1.jpg');">
-                            <div class="post-cat">
-                                2024 Model
+                <?php foreach ($cars as $car): ?>
+                    <div class="col-lg-12">
+                        <div class="car-list-items">
+                            <div class="car-image bg-cover" style="background-image: url('assets/car-images/<?= $car->photo; ?>');">
+                                <div class="post-cat">
+                                    <?= $car->name; ?>
+                                </div>
                             </div>
-                        </div>
-                        <div class="car-content">
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <span>2 Reviews</span>
+                            <div class="car-content">
+                                
+                                <h6 class="price">Rp. <?= number_format($car->price_rate, 0, ',', '.'); ?> <span>/ Day</span></h6>
+                                <h3><a href="car-details.html"><?= $car->name; ?></a></h3>
+                                <p>
+                                    <?= $car->description; ?>
+                                </p>
+                                <ul class="icon-items">
+                                    <li>
+                                        <img src="<?= base_url('assets/landing-assets/img/car/seat.svg'); ?>" alt="img" class="me-1">
+                                        <?= $car->seat; ?> Seats
+                                    </li>
+                                    <li>
+                                        <img src="<?= base_url('assets/landing-assets/img/car/door.svg'); ?>" alt="img" class="me-1">
+                                        <?= $car->door; ?> Doors
+                                    </li>
+                                    <li>
+                                        <img src="<?= base_url('assets/landing-assets/img/car/automatic.svg'); ?>" alt="img" class="me-1">
+                                        <?= $car->engine; ?>
+                                    </li>
+                                    <li>
+                                        <img src="<?= base_url('assets/landing-assets/img/car/petrol.svg'); ?>" alt="img" class="me-1">
+                                        <?= $car->fuel; ?>
+                                    </li>
+                                </ul>
                             </div>
-                            <h6 class="price">$70.00 <span>/ Day</span></h6>
-                            <h3><a href="car-details.html">Hyundai Accent Limited</a></h3>
-                            <p>
-                                To deliver on the promise of technology and human ingenuity We help our clients become the next and best versions of themselves.
-                            </p>
-                            <ul class="icon-items">
-                                <li>
-                                    <img src="assets/img/car/seat.svg" alt="img" class="me-1">
-                                    6 Seats
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/door.svg" alt="img" class="me-1">
-                                    2 Doors
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/automatic.svg" alt="img" class="me-1">
-                                    Automatic
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/petrol.svg" alt="img" class="me-1">
-                                    Petrol
-                                </li>
-                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="car-list-items">
-                        <div class="car-image bg-cover" style="background-image: url('assets/img/car/car-list-2.jpg');">
-                            <div class="post-cat">
-                                2024 Model
-                            </div>
-                        </div>
-                        <div class="car-content">
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <span>2 Reviews</span>
-                            </div>
-                            <h6 class="price">$70.00 <span>/ Day</span></h6>
-                            <h3><a href="car-details.html">Hyundai Accent Limited</a></h3>
-                            <p>
-                                To deliver on the promise of technology and human ingenuity We help our clients become the next and best versions of themselves.
-                            </p>
-                            <ul class="icon-items">
-                                <li>
-                                    <img src="assets/img/car/seat.svg" alt="img" class="me-1">
-                                    6 Seats
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/door.svg" alt="img" class="me-1">
-                                    2 Doors
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/automatic.svg" alt="img" class="me-1">
-                                    Automatic
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/petrol.svg" alt="img" class="me-1">
-                                    Petrol
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="car-list-items">
-                        <div class="car-image bg-cover" style="background-image: url('assets/img/car/car-list-3.jpg');">
-                            <div class="post-cat">
-                                2024 Model
-                            </div>
-                        </div>
-                        <div class="car-content">
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <span>2 Reviews</span>
-                            </div>
-                            <h6 class="price">$70.00 <span>/ Day</span></h6>
-                            <h3><a href="car-details.html">Hyundai Accent Limited</a></h3>
-                            <p>
-                                To deliver on the promise of technology and human ingenuity We help our clients become the next and best versions of themselves.
-                            </p>
-                            <ul class="icon-items">
-                                <li>
-                                    <img src="assets/img/car/seat.svg" alt="img" class="me-1">
-                                    6 Seats
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/door.svg" alt="img" class="me-1">
-                                    2 Doors
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/automatic.svg" alt="img" class="me-1">
-                                    Automatic
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/petrol.svg" alt="img" class="me-1">
-                                    Petrol
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="car-list-items">
-                        <div class="car-image bg-cover" style="background-image: url('assets/img/car/car-list-4.jpg');">
-                            <div class="post-cat">
-                                2024 Model
-                            </div>
-                        </div>
-                        <div class="car-content">
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <span>2 Reviews</span>
-                            </div>
-                            <h6 class="price">$70.00 <span>/ Day</span></h6>
-                            <h3><a href="car-details.html">Hyundai Accent Limited</a></h3>
-                            <p>
-                                To deliver on the promise of technology and human ingenuity We help our clients become the next and best versions of themselves.
-                            </p>
-                            <ul class="icon-items">
-                                <li>
-                                    <img src="assets/img/car/seat.svg" alt="img" class="me-1">
-                                    6 Seats
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/door.svg" alt="img" class="me-1">
-                                    2 Doors
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/automatic.svg" alt="img" class="me-1">
-                                    Automatic
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/petrol.svg" alt="img" class="me-1">
-                                    Petrol
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="car-list-items">
-                        <div class="car-image bg-cover" style="background-image: url('assets/img/car/car-list-5.jpg');">
-                            <div class="post-cat">
-                                2024 Model
-                            </div>
-                        </div>
-                        <div class="car-content">
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <span>2 Reviews</span>
-                            </div>
-                            <h6 class="price">$70.00 <span>/ Day</span></h6>
-                            <h3><a href="car-details.html">Hyundai Accent Limited</a></h3>
-                            <p>
-                                To deliver on the promise of technology and human ingenuity We help our clients become the next and best versions of themselves.
-                            </p>
-                            <ul class="icon-items">
-                                <li>
-                                    <img src="assets/img/car/seat.svg" alt="img" class="me-1">
-                                    6 Seats
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/door.svg" alt="img" class="me-1">
-                                    2 Doors
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/automatic.svg" alt="img" class="me-1">
-                                    Automatic
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/petrol.svg" alt="img" class="me-1">
-                                    Petrol
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="car-list-items">
-                        <div class="car-image bg-cover" style="background-image: url('assets/img/car/car-list-6.jpg');">
-                            <div class="post-cat">
-                                2024 Model
-                            </div>
-                        </div>
-                        <div class="car-content">
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <span>2 Reviews</span>
-                            </div>
-                            <h6 class="price">$70.00 <span>/ Day</span></h6>
-                            <h3><a href="car-details.html">Hyundai Accent Limited</a></h3>
-                            <p>
-                                To deliver on the promise of technology and human ingenuity We help our clients become the next and best versions of themselves.
-                            </p>
-                            <ul class="icon-items">
-                                <li>
-                                    <img src="assets/img/car/seat.svg" alt="img" class="me-1">
-                                    6 Seats
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/door.svg" alt="img" class="me-1">
-                                    2 Doors
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/automatic.svg" alt="img" class="me-1">
-                                    Automatic
-                                </li>
-                                <li>
-                                    <img src="assets/img/car/petrol.svg" alt="img" class="me-1">
-                                    Petrol
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -290,7 +75,7 @@
                     .3s">
                 <div class="logo-thumb">
                     <a href="index.html">
-                        <img src="assets/img/logo/white-logo.svg" alt="logo-img">
+                        <img src="<?= base_url('assets/landing-assets/img/logo/white-logo.svg'); ?>" alt="logo-img">
                     </a>
                 </div>
                 <h4 class="text-white">Save big with our cheap car rental</h4>

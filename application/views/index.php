@@ -1,4 +1,3 @@
-    
     <!-- Hero Section Start -->
     <section class="hero-section hero-1 fix">
         <div class="array-button">
@@ -145,186 +144,46 @@
             </div>
             <div class="swiper car-rentals-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="car-rentals-items">
-                            <div class="car-image">
-                                <img src="<?= base_url('assets/landing-assets') ?>/img/car/01.jpg" alt="img">
-                            </div>
-                            <div class="car-content">
-                                <div class="post-cat">
-                                    2024 Model
+                    <?php foreach ($cars as $car): ?>
+                        <div class="swiper-slide">
+                            <div class="car-rentals-items">
+                                <div class="car-image">
+                                    <img src="<?= base_url('assets/car-images/') ?><?= $car->photo; ?>" alt="img" style="width: 100%; height: 200px; object-fit: cover;">
                                 </div>
-                                <div class="star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>2 Reviews</span>
+                                <div class="car-content">
+                                    <div class="post-cat">
+                                        <?= $car->name; ?>
+                                    </div>
+
+                                    <h4><a href="car-details.html"><?= $car->name; ?></a></h4>
+                                    <h6>Rp. <?= number_format($car->price_rate, 0, ',', '.'); ?> <span>/ Day</span></h6>
+                                    <div class="icon-items">
+                                        <ul>
+                                            <li>
+                                                <img src="<?= base_url('assets/landing-assets') ?>/img/car/seat.svg" alt="img" class="me-1">
+                                                <?= $car->seat; ?> Seats
+                                            </li>
+                                            <li>
+                                                <img src="<?= base_url('assets/landing-assets') ?>/img/car/door.svg" alt="img" class="me-1">
+                                                <?= $car->door; ?> Doors
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <img src="<?= base_url('assets/landing-assets') ?>/img/car/automatic.svg" alt="img" class="me-1">
+                                                <?= $car->engine; ?>
+                                            </li>
+                                            <li>
+                                                <img src="<?= base_url('assets/landing-assets') ?>/img/car/petrol.svg" alt="img" class="me-1">
+                                                <?= $car->fuel; ?>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a href="car-details.html" class="theme-btn bg-color w-100 text-center">book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
                                 </div>
-                                <h4><a href="car-details.html">Hyundai Accent Limited</a></h4>
-                                <h6>$70.00 <span>/ Day</span></h6>
-                                <div class="icon-items">
-                                    <ul>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/seat.svg" alt="img" class="me-1">
-                                            6 Seats
-                                        </li>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/door.svg" alt="img" class="me-1">
-                                            2 Doors
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/automatic.svg" alt="img" class="me-1">
-                                            Automatic
-                                        </li>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/petrol.svg" alt="img" class="me-1">
-                                            Petrol
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="car-details.html" class="theme-btn bg-color w-100 text-center">book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="car-rentals-items">
-                            <div class="car-image">
-                                <img src="<?= base_url('assets/landing-assets') ?>/img/car/01.jpg" alt="img">
-                            </div>
-                            <div class="car-content">
-                                <div class="post-cat">
-                                    2024 Model
-                                </div>
-                                <div class="star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>2 Reviews</span>
-                                </div>
-                                <h4><a href="car-details.html">Hyundai Accent Limited</a></h4>
-                                <h6>$70.00 <span>/ Day</span></h6>
-                                <div class="icon-items">
-                                    <ul>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/seat.svg" alt="img" class="me-1">
-                                            6 Seats
-                                        </li>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/door.svg" alt="img" class="me-1">
-                                            2 Doors
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/automatic.svg" alt="img" class="me-1">
-                                            Automatic
-                                        </li>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/petrol.svg" alt="img" class="me-1">
-                                            Petrol
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="car-details.html" class="theme-btn bg-color w-100 text-center">book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="car-rentals-items">
-                            <div class="car-image">
-                                <img src="<?= base_url('assets/landing-assets') ?>/img/car/01.jpg" alt="img">
-                            </div>
-                            <div class="car-content">
-                                <div class="post-cat">
-                                    2024 Model
-                                </div>
-                                <div class="star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>2 Reviews</span>
-                                </div>
-                                <h4><a href="car-details.html">Hyundai Accent Limited</a></h4>
-                                <h6>$70.00 <span>/ Day</span></h6>
-                                <div class="icon-items">
-                                    <ul>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/seat.svg" alt="img" class="me-1">
-                                            6 Seats
-                                        </li>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/door.svg" alt="img" class="me-1">
-                                            2 Doors
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/automatic.svg" alt="img" class="me-1">
-                                            Automatic
-                                        </li>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/petrol.svg" alt="img" class="me-1">
-                                            Petrol
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="car-details.html" class="theme-btn bg-color w-100 text-center">book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="car-rentals-items">
-                            <div class="car-image">
-                                <img src="<?= base_url('assets/landing-assets') ?>/img/car/01.jpg" alt="img">
-                            </div>
-                            <div class="car-content">
-                                <div class="post-cat">
-                                    2024 Model
-                                </div>
-                                <div class="star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>2 Reviews</span>
-                                </div>
-                                <h4><a href="car-details.html">Hyundai Accent Limited</a></h4>
-                                <h6>$70.00 <span>/ Day</span></h6>
-                                <div class="icon-items">
-                                    <ul>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/seat.svg" alt="img" class="me-1">
-                                            6 Seats
-                                        </li>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/door.svg" alt="img" class="me-1">
-                                            2 Doors
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/automatic.svg" alt="img" class="me-1">
-                                            Automatic
-                                        </li>
-                                        <li>
-                                            <img src="<?= base_url('assets/landing-assets') ?>/img/car/petrol.svg" alt="img" class="me-1">
-                                            Petrol
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="car-details.html" class="theme-btn bg-color w-100 text-center">book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
